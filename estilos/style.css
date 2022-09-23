@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 
 /* Paleta de cores
 #FFA831
@@ -10,6 +12,7 @@
 :root {
     --fonte-destaque: 'Roboto', sans-serif;
     --fonte-padrao: 'Asap', sans-serif;
+    --fonte-terceira: 'Cataraman', sans-serif;
 
     --cor001: #FFA831;
     --cor002: #006EB3;
@@ -27,6 +30,16 @@ body, html {
     background-color: var(--cor002);
     height: 100vh;
     width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-destaque);
+}
+
+a {
+    font-family: var(--fonte-terceira);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
@@ -61,4 +74,48 @@ section > article#imagem {
 section#login > article#formulario {
     padding: 10px;
     display: block;
+}
+
+form > div.campo {
+    background-color: var(--cor002);
+    height: 40px;
+    border-radius: 10px;
+    margin: 5px 0px;
+}
+
+form label {
+    display: none;
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor001);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+form > input[type=submit]:hover {
+    background-color: #b77a25;
+    cursor: pointer;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: white;
+    color: #fc9300;
+    border: 1px solid var(--cor001);
+    border-radius: 10px;
+}
+
+form > a.botao:hover {
+    background-color: #ffd190;
 }
